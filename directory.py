@@ -30,8 +30,26 @@ os.rmdir('grand-child-dir')
 '''
 #remove inner directory
 #os.chdir('yourdir')
-print(os.getcwd())
-os.rmdir('yourdir/child-mydir')
+#print(os.getcwd())
+#os.rmdir('yourdir/child-mydir')
 
 #remove all 
-os.removedirs('parent/child-dir')
+#os.removedirs('parent/child-dir')
+
+'''
+#walk
+w = os.walk('.')
+for i in w:
+    print(i)
+'''
+#specific directory
+w = os.walk('parent-dir')
+for i in w:
+    print(i)
+
+#specific directory buttom-to-top
+w = os.walk('parent-dir', topdown=False)
+print(" buttom-to-top")
+for i in w:
+    print(i)
+
